@@ -1,9 +1,9 @@
-<input [(ngModel)]="sumTaken"><br/>
-<button (click)="calculatePercentage()">Calculate</button>
+<input [(ngModel)]="sumInTrust"><br />
+<button (click)="calculate()">Calculate</button>
 
-<ng-container *ngIf="totalNumber > 0">
-  You are richer than {{totalNumber}} people<br/>
-  You are richer than {{totalNumber / this.howManyPeople * 100 | number: '1.2-2'}}%
+<ng-container *ngIf="peopleBelowYou > 0">
+  You are richer than {{peopleBelowYou}} people<br />
+  You are richer than {{percentage | number: '1.2-2'}}%
 </ng-container>
 
 <router-outlet></router-outlet>
