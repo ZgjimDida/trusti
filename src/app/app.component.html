@@ -1,9 +1,20 @@
-<input [(ngModel)]="sumInTrust"><br />
-<button (click)="calculate()">Calculate</button>
+<div class="container">
 
-<ng-container *ngIf="peopleBelowYou > 0">
-  You are richer than {{peopleBelowYou}} people<br />
-  You are richer than {{percentage | number: '1.2-2'}}%
-</ng-container>
+  <div class="search-holder">
+    Shuma në Trust:
+    <input [(ngModel)]="sumInTrust">
+    <button (click)="calculate()">Kalkulo</button><br />
+  </div>
+
+  <ng-container *ngIf="peopleBelowYou > 0">
+    <p>
+      Je më i pasur se {{peopleBelowYou | number}} njerëz<br />
+      Je më i pasur se {{percentage | number: '1.2-2'}}% e njerëzve
+    </p>  
+  </ng-container>
+
+  <br />
+  <img src="assets/121366008_3649479568453839_8356114315715293097_n.jpg" width="100%" />
+</div>
 
 <router-outlet></router-outlet>
